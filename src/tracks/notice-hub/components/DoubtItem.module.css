@@ -1,0 +1,58 @@
+.doubt {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  background: var(--color-surface);
+}
+
+.question {
+  word-break: break-word;
+}
+
+.meta {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.response {
+  margin-top: var(--space-3);
+  padding: var(--space-3);
+  border-left: 3px solid var(--color-primary);
+  background: var(--color-surface-muted);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.responseText {
+  word-break: break-word;
+}
+
+.answerForm {
+  margin-top: var(--space-3);
+}
+
+.textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  line-height: 1.5;
+  resize: vertical;
+  transition: border-color var(--duration-fast);
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: var(--color-focus-ring);
+  box-shadow: 0 0 0 2px var(--color-primary-subtle);
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}

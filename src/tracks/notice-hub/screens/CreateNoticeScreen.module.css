@@ -1,0 +1,84 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.label {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-text);
+}
+
+.textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: var(--text-md);
+  line-height: 1.6;
+  resize: vertical;
+  transition: border-color var(--duration-fast);
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: var(--color-focus-ring);
+  box-shadow: 0 0 0 2px var(--color-primary-subtle);
+}
+
+.textarea.error {
+  border-color: var(--color-danger);
+}
+
+.errorText {
+  color: var(--color-danger);
+  font-size: var(--text-sm);
+}
+
+.checkboxRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  cursor: pointer;
+}
+
+.checkboxRow input[type='checkbox'] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: var(--color-primary);
+}
+
+.fileInput {
+  display: block;
+  font-size: var(--text-sm);
+  color: var(--color-text);
+}
+
+.attachmentInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-muted);
+  gap: var(--space-3);
+}
+
+.formActions {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}

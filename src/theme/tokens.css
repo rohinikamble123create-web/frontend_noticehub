@@ -1,0 +1,204 @@
+/*
+ * Campus OS design tokens: Enterprise Premium Design System.
+ *
+ * To rebrand, change the primitives below. Components and tracks must only use
+ * the semantic tokens (--color-*, --space-*, ...), never raw hex values.
+ */
+
+:root {
+  /* ── Legacy Primitives (Retained for full backward compatibility) ── */
+  --purple-50: #f6edff;
+  --purple-100: rgba(170, 59, 255, 0.1);
+  --purple-300: #d8b4fe;
+  --purple-400: #c084fc;
+  --purple-500: #aa3bff;
+  --purple-600: #8a22e0;
+  --purple-700: #6e14b8;
+
+  --gray-0: #ffffff;
+  --gray-50: #f9f8fb;
+  --gray-100: #f4f3ec;
+  --gray-200: #e5e4e7;
+  --gray-500: #6b6375;
+  --gray-900: #08060d;
+
+  --night-900: #16171d;
+  --night-800: #1f2028;
+  --night-700: #2e303a;
+  --night-300: #9ca3af;
+  --night-50: #f3f4f6;
+
+  --red-600: #c62828;
+  --red-300: #f87171;
+  --green-600: #1b7f3b;
+  --green-300: #4ade80;
+
+  /* ── Enterprise Deep Navy Foundation (Sidebar & Core Shell) ── */
+  --navy-950: #060b18;
+  --navy-900: #0d1527;
+  --navy-850: #131e36;
+  --navy-800: #1b2949;
+  --navy-700: #2d406b;
+  --navy-600: #475f94;
+  --navy-400: #7e95c4;
+  --navy-200: #c2d0ec;
+  --navy-100: #e2e8f5;
+
+  /* ── Enterprise Royal Brand Palette (Sapphire & Indigo) ── */
+  --brand-800: #1e40af;
+  --brand-700: #1d4ed8;
+  --brand-600: #2563eb;
+  --brand-500: #3b82f6;
+  --brand-400: #60a5fa;
+  --brand-300: #93c5fd;
+  --brand-100: #dbeafe;
+  --brand-50:  #eff6ff;
+
+  /* ── Enterprise Accent Highlights ── */
+  --accent-violet: #6366f1;
+  --accent-cyan:   #0284c7;
+
+  /* ── Semantic Colors: Sidebar (Enterprise Deep Navy) ── */
+  --color-sidebar-bg: var(--navy-900);
+  --color-sidebar-surface: var(--navy-850);
+  --color-sidebar-border: var(--navy-800);
+  --color-sidebar-text: var(--navy-400);
+  --color-sidebar-text-hover: #ffffff;
+  --color-sidebar-text-active: #ffffff;
+  --color-sidebar-active-bg: rgba(37, 99, 235, 0.2);
+  --color-sidebar-active-bar: var(--brand-500);
+  --color-sidebar-badge-bg: var(--navy-800);
+  --color-sidebar-badge-text: var(--navy-200);
+
+  /* ── Semantic Colors: Top Header ── */
+  --color-header-bg: #ffffff;
+  --color-header-border: #e2e8f0;
+
+  /* ── Semantic Colors: Light Mode Surfaces & Canvas ── */
+  --color-bg: #f8fafc;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f1f5f9;
+  --color-text: #0f172a;
+  --color-text-muted: #64748b;
+  --color-border: #e2e8f0;
+  --color-primary: var(--brand-600);
+  --color-primary-hover: var(--brand-700);
+  --color-on-primary: #ffffff;
+  --color-primary-subtle: var(--brand-50);
+  --color-accent: var(--brand-500);
+  --color-danger: var(--red-600);
+  --color-success: var(--green-600);
+  --color-focus-ring: var(--brand-500);
+
+  /* ── Spacing (4px scale) ── */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 32px;
+  --space-8: 48px;
+
+  /* ── Radii ── */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-full: 999px;
+
+  /* ── Typography ── */
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: ui-monospace, Consolas, monospace;
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-md: 16px;
+  --text-lg: 18px;
+  --text-xl: 24px;
+  --text-2xl: 32px;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-bold: 600;
+
+  /* ── Elevation Shadows ── */
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.07), 0 2px 4px -2px rgba(15, 23, 42, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -4px rgba(15, 23, 42, 0.04);
+
+  /* ── Motion ── */
+  --duration-fast: 120ms;
+  --duration-normal: 200ms;
+
+  color-scheme: light;
+}
+
+/* ── Semantic colors: dark (system preference unless the user forced light) ── */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --color-sidebar-bg: var(--navy-950);
+    --color-sidebar-surface: #0c1424;
+    --color-sidebar-border: #16223b;
+    --color-sidebar-text: #94a3b8;
+    --color-sidebar-text-hover: #ffffff;
+    --color-sidebar-text-active: #ffffff;
+    --color-sidebar-active-bg: rgba(96, 165, 250, 0.18);
+    --color-sidebar-active-bar: var(--brand-400);
+    --color-sidebar-badge-bg: #1e293b;
+    --color-sidebar-badge-text: #93c5fd;
+
+    --color-header-bg: #0d1527;
+    --color-header-border: #1e293b;
+
+    --color-bg: #0a0f1d;
+    --color-surface: #111827;
+    --color-surface-muted: #1e293b;
+    --color-text: #f8fafc;
+    --color-text-muted: #94a3b8;
+    --color-border: #1e293b;
+    --color-primary: var(--brand-400);
+    --color-primary-hover: var(--brand-300);
+    --color-on-primary: var(--night-900);
+    --color-primary-subtle: rgba(59, 130, 246, 0.15);
+    --color-accent: var(--brand-400);
+    --color-danger: var(--red-300);
+    --color-success: var(--green-300);
+    --color-focus-ring: var(--brand-400);
+    --shadow-sm: rgba(0, 0, 0, 0.3) 0 1px 3px;
+    --shadow-md: rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+    color-scheme: dark;
+  }
+}
+
+/* ── Semantic colors: dark (explicit user choice via data-theme="dark") ── */
+:root[data-theme='dark'] {
+  --color-sidebar-bg: var(--navy-950);
+  --color-sidebar-surface: #0c1424;
+  --color-sidebar-border: #16223b;
+  --color-sidebar-text: #94a3b8;
+  --color-sidebar-text-hover: #ffffff;
+  --color-sidebar-text-active: #ffffff;
+  --color-sidebar-active-bg: rgba(96, 165, 250, 0.18);
+  --color-sidebar-active-bar: var(--brand-400);
+  --color-sidebar-badge-bg: #1e293b;
+  --color-sidebar-badge-text: #93c5fd;
+
+  --color-header-bg: #0d1527;
+  --color-header-border: #1e293b;
+
+  --color-bg: #0a0f1d;
+  --color-surface: #111827;
+  --color-surface-muted: #1e293b;
+  --color-text: #f8fafc;
+  --color-text-muted: #94a3b8;
+  --color-border: #1e293b;
+  --color-primary: var(--brand-400);
+  --color-primary-hover: var(--brand-300);
+  --color-on-primary: var(--night-900);
+  --color-primary-subtle: rgba(59, 130, 246, 0.15);
+  --color-accent: var(--brand-400);
+  --color-danger: var(--red-300);
+  --color-success: var(--green-300);
+  --color-focus-ring: var(--brand-400);
+  --shadow-sm: rgba(0, 0, 0, 0.3) 0 1px 3px;
+  --shadow-md: rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+  color-scheme: dark;
+}
